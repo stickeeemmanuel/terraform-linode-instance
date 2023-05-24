@@ -17,7 +17,7 @@ resource "linode_sshkey" "stickee-ansible" {
 }
 
 resource "linode_instance" "eapreko-test-server" {
-  count           = 2
+  count           = 1
   label           = "eapreko-test-server-0${count.index + 1}"
   tags            = ["eapreko-test-server"]
   region          = var.region
